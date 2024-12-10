@@ -5,12 +5,11 @@ def evaluate_model(model, X_train, y_train, X_test, y_test):
     Trains a given model, makes predictions, and evaluates performance.
 
     Parameters:
-    model (object): A machine learning model with `fit` and `predict` methods.
-    X_train (array-like): Training features.
-    y_train (array-like): Training labels.
-    X_test (array-like): Test features.
-    y_test (array-like): Test labels.
-    
+    model: A machine learning model with `fit` and `predict` methods.
+    X_train: Training features.
+    y_train: Training labels.
+    X_test: Test features.
+    y_test: Test labels.
     """
     # Train the model
     model.fit(X_train, y_train)
