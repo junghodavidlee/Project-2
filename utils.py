@@ -1,4 +1,11 @@
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+def evaluate_model_full(model, X_train, y_train, X_test, y_test, X_train_resampled, y_train_resampled, X_train_pca, X_test_pca):
+    print("Unprocessed Data Metrics:")
+    evaluate_model(model, X_train, y_train, X_test, y_test)
+    print("\nResampled Data Metrics:")
+    evaluate_model(model, X_train_resampled, y_train_resampled, X_test, y_test)
+    print("\nPCA Data Metrics:")
+    evaluate_model(model, X_train_pca, y_train, X_test_pca, y_test)
 
 def evaluate_model(model, X_train, y_train, X_test, y_test):
     """
